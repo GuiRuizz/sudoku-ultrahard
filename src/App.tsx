@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import { toast } from "react-toastify";
 
 function shuffle<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
@@ -59,7 +60,16 @@ export default function Sudoku() {
     if (!num || num < 1 || num > 9) return;
 
     if (num !== solution[row][col]) {
-      alert("Errou! Novo jogo iniciado 😈");
+      toast("Errou! Novo jogo iniciado 😈", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
       newGame();
       return;
     }
