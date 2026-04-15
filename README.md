@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# 🧩 Sudoku-Ultrahard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sudoku-Ultrahard** é um Web App desenvolvido com **Vite + React + TypeScript**, criado como um projeto **Open Source** com foco em interação com a comunidade do YouTube. A ideia é transformar o clássico Sudoku em um desafio extremo, competitivo e envolvente.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Sobre o Projeto
 
-## React Compiler
+Este projeto nasceu como uma forma de aproximar o desenvolvimento de software com a comunidade, permitindo que inscritos e desenvolvedores participem, contribuam e acompanhem a evolução do app.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo é oferecer uma experiência desafiadora com modos únicos e um sistema de competição através de leaderboards.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎮 Modos de Jogo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O Sudoku-Ultrahard contará com **3 modos principais**, todos com **leaderboards competitivas**:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔁 1. Infinite Mode
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* O jogador resolve sudokus em sequência infinita.
+* **Não é permitido errar nenhuma vez.**
+* Ao errar, a sequência é perdida.
+* 🏆 Leaderboard baseada na **maior sequência sem erros**.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ⏱️ 2. Infinite Time Mode
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Igual ao modo Infinite.
+* Inclui um **timer ativo durante a sequência**.
+* 🏆 Leaderboard baseada em:
+
+  * **Maior sequência**
+  * **Menor tempo total**
+* Quanto maior a sequência e menor o tempo, melhor a colocação.
+
+---
+
+### 🧠 3. Missing Cell Mode (Ultrahard)
+
+* Similar ao Infinite Time Mode.
+* Em cada bloco **3x3 do Sudoku**, haverá **1 número faltando**.
+* O jogador deve completar corretamente mantendo a sequência.
+* 🏆 Leaderboard baseada em:
+
+  * **Sequência**
+  * **Tempo**
+* Este é o modo mais desafiador do projeto.
+
+---
+
+## 🏆 Leaderboards
+
+Cada modo possui sua própria leaderboard, incentivando a competição entre jogadores e promovendo um ambiente de desafio contínuo.
+
+---
+
+## 🌍 Open Source & Comunidade
+
+Este é um projeto **Open Source**, aberto para contribuições da comunidade.
+
+### 🤝 Contribuições
+
+* Pull Requests (PRs) são bem-vindos.
+* Todas as contribuições serão **avaliadas cuidadosamente**.
+
+### ⚠️ Regras importantes
+
+* Não será aceito nenhum código **malicioso, ilegal ou prejudicial**.
+* Espera-se **respeito entre todos os contribuidores**.
+* O objetivo é manter um ambiente saudável e colaborativo.
+
+---
+
+## 📺 Comunidade YouTube
+
+Este projeto também é uma forma de interação com a comunidade do YouTube, permitindo:
+
+* Participação ativa no desenvolvimento
+* Sugestões de features
+* Competição nos leaderboards
+
+---
+
+## 🛠️ Tecnologias
+
+* ⚡ Vite
+* ⚛️ React
+* 🔷 TypeScript
+
+---
+
+## 📌 Status
+
+🚧 Em desenvolvimento
+
+---
+
+## 💡 Contribua
+
+Se você quer participar, fique à vontade para abrir issues, sugerir melhorias ou enviar PRs.
+
+Vamos construir algo incrível juntos 🚀
